@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine's day babbyy🤭🌚</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+}
+
+.character {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #e91e63;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#yesBtn {
+    background-color: #e91e63;
+    color: white;
+}
+
+#noBtn {
+    background-color: #ddd;
+    color: #333;
+    margin-left: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Cute Character PNG -->
+    <img class="character"
+    src="https://pngimg.com/uploads/hello_kitty/hello_kitty_PNG47.png">
+
+    <h1>Will u marry me abhi kuttyy😭🫶🏻</h1>
+    <p>I know u wont break my heart🌚...</p>
+
+    <div class="buttons">
+        <button id="yesBtn" onclick="sayYes()">Yes 💖</button>
+        <button id="noBtn" onclick="shrinkNo()">No 🙈</button>
+    </div>
+
+</div>
+
+<script>
+let noSize = 1;
+let yesSize = 1;
+
+function shrinkNo() {
+    noSize -= 0.15;
+    yesSize += 0.15;
+
+    if (noSize <= 0.3) {
+        noSize = 0.3;
+    }
+
+    document.getElementById("noBtn").style.transform =
+        "scale(" + noSize + ")";
+    document.getElementById("yesBtn").style.transform =
+        "scale(" + yesSize + ")";
+}
+
+function sayYes() {
+    document.querySelector(".container").innerHTML =
+        "<img class='character' src='https://pngimg.com/uploads/hello_kitty/hello_kitty_PNG47.png'>" +
+        "<h1>Yaaaayyy.... I love u the most shutuuu🌚😭😘💋💋💋</h1>" +
+        "<p>Lets get married soon babbyyy🌚🫂😭</p>";
+}
+</script>
+
+</body>
+</html>
